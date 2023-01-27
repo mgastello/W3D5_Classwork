@@ -29,5 +29,11 @@ class PolyTreeNode
       raise "node is not a child" if child_node.parent == nil
     end
 
-    
+    def dfs(target_value)
+        return self if self.value == target_value
+
+        stack = []
+        stack.push(value)
+
+    end
 end
