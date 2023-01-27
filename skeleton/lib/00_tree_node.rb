@@ -7,7 +7,10 @@ class PolyTreeNode
         @children = []
     end
 
-    def parent=
-        parent = nil
+    def parent=(value)
+        if !parent == nil
+          parent = self.value
+          children << parent.value
+        end
     end
 end
