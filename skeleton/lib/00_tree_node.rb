@@ -14,7 +14,12 @@ class PolyTreeNode
         node.children << self
       end
       if old != nil
-        old.children.pop(self)
+        old.children.pop
       end
+    end
+
+    def add_child(child_node)
+        new_parent = child_node.parent=(self)
+        new_parent.children.push(child_node)
     end
 end
